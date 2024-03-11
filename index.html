@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="script.js"></script>
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Libre Franklin", sans-serif;
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 8%;
+      }
+      img.logo {
+        margin: 60px auto;
+      }
+      h1 {
+        font-weight: 300;
+        color: hsl(0, 0%, 59%);
+      }
+      h1 span {
+        font-weight: 700;
+        color: hsl(209, 33%, 12%);
+      }
+      p.subscribe {
+        color: hsl(209, 33%, 12%);
+        font-weight: 500;
+        margin: 30px auto;
+      }
+      input[type="text"] {
+        border: 2px solid hsl(223, 100%, 88%);
+        color: hsl(209, 33%, 12%);
+        padding: 20px 30px;
+      }
+      input:focus,
+      input:active,
+      button:focus,
+      button:active {
+        outline: none;
+      }
+      input::placeholder {
+        color: hsl(223, 100%, 88%);
+      }
+      input {
+        width: 80%;
+        margin: 20px auto 10px;
+        border-radius: 50px;
+      }
+      button[type="submit"] {
+        background-color: hsl(223, 87%, 63%);
+        color: #fff;
+        padding: 22px 0px;
+        border: none;
+        width: 80%;
+        margin: 20px auto 10px;
+        border-radius: 50px;
+      }
+      button[type="submit"]:hover {
+        background-color: hsl(223, 97%, 69%);
+        cursor: pointer;
+      }
+      img.illustration {
+        width: 100%;
+        margin: 25% auto;
+      }
+      .icon {
+        color: hsl(223, 87%, 63%);
+        font-size: 2rem;
+        margin: 0px 30px;
+      }
+      .copy {
+        margin: 50px 0px;
+        color: hsl(0, 0%, 59%);
+      }
+      p#error {
+        color: hsl(354, 100%, 66%);
+        font-size: 0.7rem;
+        font-style: italic;
+        font-weight: 500;
+      }
+      @media only screen and (width>900px) {
+        body {
+          padding: 2% 8%;
+        }
+        p.subscribe {
+          margin: 15px;
+        }
+        input {
+          display: inline;
+        }
+        input[type="text"] {
+          width: 95%;
+          height: 55px;
+          margin: 10px 0px;
+        }
+        button[type="submit"] {
+          padding: 0px;
+          height: 55px;
+          margin: 10px 0px;
+          font-size: 1rem;
+          width: 30%;
+        }
+        img.illustration {
+          width: 50%;
+          margin: 5%;
+        }
+        .icon,
+        .copy {
+          font-size: 0.975rem;
+        }
+        .copy {
+          margin: 20px 0px;
+        }
+        p#error {
+          text-align: left;
+          margin: 0px 30px;
+        }
+        span.input {
+          flex: 1;
+        }
+        form {
+          display: flex;
+          width: 60%;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="images/logo.svg" alt="logo" class="logo" />
+      <h1>We are launching <span>soon!</span></h1>
+      <p class="subscribe">Subscribe and get notified</p>
+      <form id="Form">
+        <span class="input">
+          <input
+            type="text"
+            name="Email"
+            id="Email"
+            placeholder="Your email address..."
+          />
+          <p id="error"></p>
+        </span>
+        <button type="submit" form="Form" id="submit-btn" onclick="Form">Notify me</button>
+      </form>
+    </div>
+    <img
+      src="images/illustration-dashboard.png"
+      alt="illustration"
+      class="illustration"
+    />
+    <footer>
+      <div class="icons">
+        <i class="fa-brands fa-facebook-f icon"></i>
+        <i class="fa-brands fa-twitter icon"></i>
+        <i class="fa-brands fa-instagram icon"></i>
+      </div>
+      <p class="copy">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
